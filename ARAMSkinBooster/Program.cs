@@ -17,7 +17,7 @@ namespace ARAMSkinBooster
 		{
 			while (true)
 			{
-                Console.WriteLine("Use boost.");
+                		Console.WriteLine("Use boost");
 				string input = Console.ReadLine();
 				if (input == "boost")
 				{
