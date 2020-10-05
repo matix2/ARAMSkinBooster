@@ -1,10 +1,9 @@
-﻿using RestSharp;
+using RestSharp;
 using RestSharp.Authenticators;
 using System;
 using System.Management;
 using System.Net;
 using System.Net.Security;
-using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -13,11 +12,11 @@ namespace ARAMSkinBooster
 {
     class Program
 	{
-		static void Main(string[] args)
+        static void Main(string[] args)
 		{
 			while (true)
 			{
-                		Console.WriteLine("Use boost");
+				Console.WriteLine("Use boost");
 				string input = Console.ReadLine();
 				if (input == "boost")
 				{
@@ -35,7 +34,7 @@ namespace ARAMSkinBooster
 			}
 		}
 
-		private static ValueTuple<string, string> GetInfo()
+		static ValueTuple<string, string> GetInfo()
 		{
 			string text = "";
 			string text2 = "";
@@ -78,12 +77,10 @@ namespace ARAMSkinBooster
 			restClient.Execute(request);
 		}
 
-		private static readonly string string_0 = "\"--remoting-auth-token=(?'token'.*?)\" | \"--app-port=(?'port'|.*?)\"";
-		private static readonly RegexOptions regexOptions_0 = RegexOptions.Multiline;
+		static readonly string string_0 = "\"--remoting-auth-token=(?'token'.*?)\" | \"--app-port=(?'port'|.*?)\"";
+		static readonly RegexOptions regexOptions_0 = RegexOptions.Multiline;
 
-		[CompilerGenerated]
-		[Serializable]
-		private sealed class Class1
+		public class Class1
 		{
 			internal bool Main(object object_0, X509Certificate x509Certificate_0, X509Chain x509Chain_0, SslPolicyErrors sslPolicyErrors_0)
 			{
@@ -91,7 +88,7 @@ namespace ARAMSkinBooster
 			}
 
 			public static readonly Class1 NewClass = new Class1();
-            		public static RemoteCertificateValidationCallback callback;
+            static RemoteCertificateValidationCallback callback;
 		}
 	}
 }
