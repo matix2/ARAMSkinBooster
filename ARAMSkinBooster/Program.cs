@@ -88,7 +88,7 @@ namespace ARAMSkinBooster
 			}
 
 			public static readonly Class1 NewClass = new Class1();
-            static RemoteCertificateValidationCallback callback;
+            		static RemoteCertificateValidationCallback callback;
 		}
 	}
 }
